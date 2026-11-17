@@ -88,6 +88,30 @@ h1 { margin: 0 0 4px; font-size: 28px; }
   box-shadow: 0 1px 3px rgba(0, 0, 0, .1);
 }
 
+.cierre {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+}
+
+.boton-cierre {
+  padding: 12px 20px;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  background: #b91c1c;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.boton-cierre:hover { opacity: .88; }
+
+.resultado { margin: 0; font-size: 15px; }
+
 .dato { display: flex; flex-direction: column; }
 
 .numero { font-size: 24px; font-weight: 700; }

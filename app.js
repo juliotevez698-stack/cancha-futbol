@@ -78,4 +78,26 @@ function actualizarResumen() {
   document.getElementById("recaudado").textContent = pesos(ocupadas * PRECIO_HORA);
 }
 
+function cerrarDia() {
+  const ocupadas = Object.keys(reservas).length;
+  const resultado = document.getElementById("resultado-dia");
+
+  if (ocupadas === 0) {
+    resultado.textContent = "Todavía no hay reservas para cerrar.";
+    return;
+  }
+
+  const total = ocupadas * PRECIO_HORA;
+  resultado.textContent =
+    "Día cerrado: " + ocupadas + " hora" + (ocupadas === 1 ? "" : "s") +
+    " alquilada" + (ocupadas === 1 ? "" : "s") + ", " + pesos(total) + " recaudados.";
+
+  Object.keys(reservas).forEach(function (hora) {
+    delete reservas[hora];
+  });
+  dibujar();
+}
+
+document.getElementById("cerrar-dia").addEventListener("click", cerrarDia);
+
 dibujar();
