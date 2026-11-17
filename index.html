@@ -3,13 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mi proyecto</title>
+  <title>Canchas Fútbol 5</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Mi proyecto ya está en internet</h1>
-  <p id="mensaje">Todavía no apretaste el botón.</p>
-  <button id="boton">Apretame</button>
+  <main>
+    <h1>Canchas Fútbol 5</h1>
+    <p class="subtitulo">Reservá tu hora. Precio por hora: <strong>$ 25.000,00</strong></p>
+
+    <div id="grilla" class="grilla"></div>
+
+    <section class="resumen" aria-live="polite">
+      <div class="dato">
+        <span class="numero" id="ocupadas">0</span>
+        <span class="etiqueta">horas ocupadas</span>
+      </div>
+      <div class="dato">
+        <span class="numero" id="libres">8</span>
+        <span class="etiqueta">horas libres</span>
+      </div>
+      <div class="dato">
+        <span class="numero" id="recaudado">$ 0,00</span>
+        <span class="etiqueta">recaudado hoy</span>
+      </div>
+    </section>
+  </main>
+
   <script src="app.js"></script>
 </body>
 </html>
